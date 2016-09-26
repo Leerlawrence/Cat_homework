@@ -30,11 +30,11 @@
 // addCatsToList();
 var app =function(){
 var options = [
-        set0 = ['Option 1','Option 2'],
-        cat1 = ['Boba','Sock Fluff','<img src="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg">'],
-        cat2 =  ['Barnaby','Tuna','<img src="http://65.media.tumblr.com/8a827e13ebb5db7d16e2b1c4cbe7ce70/tumblr_odtp4ftIhB1uhevdso1_400.jpg">'],
-        cat3 =  ["Max","Whiskas Temptations",'<img src="http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg">'],
-        cat4 =  ["Alison", "Fish and Chips",'<img src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg">'],
+        //set0 = ['Option 1','Option 2'],
+        ['Boba','Sock Fluff','<img src="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg">'],
+        ['Barnaby','Tuna','<img src="http://65.media.tumblr.com/8a827e13ebb5db7d16e2b1c4cbe7ce70/tumblr_odtp4ftIhB1uhevdso1_400.jpg">'],
+        ["Max","Whiskas Temptations",'<img src="http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg">'],
+        ["Alison", "Fish and Chips",'<img src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg">'],
         //cat5 = ['Boba','Sock Fluff','<img src="smiley.gif" alt="Smiley face" height="42" width="42">']
         //<IMG SRC="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg" />']
         
@@ -69,10 +69,12 @@ function makeUL(array) {
 }
 
 //Add the contents of options[0] to #foo:
-document.getElementById('foo').appendChild(makeUL(options[1]));
-document.getElementById('foo').appendChild(makeUL(options[2]));
-document.getElementById('foo').appendChild(makeUL(options[3]));
-document.getElementById('foo').appendChild(makeUL(options[4]));
+for(var i = 0; i < options.length; i++) {
+document.getElementById('foo').appendChild(makeUL(options[i]));
+};
+// document.getElementById('foo').appendChild(makeUL(options[1]));
+// document.getElementById('foo').appendChild(makeUL(options[2]));
+// document.getElementById('foo').appendChild(makeUL(options[3]));
 //document.getElementById('foo').appendChild(makeUL(options[5]));
 
 // makeUL(options[1]);
