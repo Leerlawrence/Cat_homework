@@ -69,12 +69,9 @@ function makeUL(array) {
 }
 
 //Add the contents of options[0] to #foo:
-for(var i = 0; i < options.length; i++) {
-document.getElementById('foo').appendChild(makeUL(options[i]));
+for(var i = 0; i < 4; i++) {
+document.getElementById('catlist').appendChild(makeUL(options[i]));
 };
-// document.getElementById('foo').appendChild(makeUL(options[1]));
-// document.getElementById('foo').appendChild(makeUL(options[2]));
-// document.getElementById('foo').appendChild(makeUL(options[3]));
 //document.getElementById('foo').appendChild(makeUL(options[5]));
 
 // makeUL(options[1]);
