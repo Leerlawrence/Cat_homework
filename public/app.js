@@ -31,10 +31,10 @@
 var app =function(){
 var options = [
         //set0 = ['Option 1','Option 2'],
-        ['Boba','Sock Fluff','<img src="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg">'],
-        ['Barnaby','Tuna','<img src="http://65.media.tumblr.com/8a827e13ebb5db7d16e2b1c4cbe7ce70/tumblr_odtp4ftIhB1uhevdso1_400.jpg">'],
-        ["Max","Whiskas Temptations",'<img src="http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg">'],
-        ["Alison", "Fish and Chips",'<img src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg">'],
+        ['Boba','Sock Fluff',"http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg"],
+        ['Barnaby','Tuna',"http://65.media.tumblr.com/8a827e13ebb5db7d16e2b1c4cbe7ce70/tumblr_odtp4ftIhB1uhevdso1_400.jpg"],
+        ["Max","Whiskas Temptations","http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg"],
+        ["Alison", "Fish and Chips","https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg"],
         //cat5 = ['Boba','Sock Fluff','<img src="smiley.gif" alt="Smiley face" height="42" width="42">']
         //<IMG SRC="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg" />']
         
@@ -49,10 +49,13 @@ var options = [
 
 
 function makeUL(array) {
+    // Create container div
+    var div = document.createElement("div")
+
     // Create the list element:
     var list = document.createElement('ul');
 
-    for(var i = 0; i < array.length; i++) {
+    for(var i = 0; i < array.length-1; i++) {
         // Create the list item:
         var item = document.createElement('li');
 
@@ -63,9 +66,19 @@ function makeUL(array) {
         list.appendChild(item);
         // document.getElementById('foo').appendChild(makeUL(options[i]));
         // makeUL(options[i]);
+
     }
+
+    var image = document.createElement("img")
+    image.src = array[2]
+    image.width = 500
+    console.log(list, image, div)
+    div.appendChild(list)
+    div.appendChild(image)
+
+
     // Finally, return the constructed list:
-    return list;
+    return div;
 }
 
 //Add the contents of options[0] to #foo:
